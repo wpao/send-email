@@ -20,7 +20,7 @@ app.get('/send-email', (req, res) => {
 app.post('/send-email', async (req, res) => {
   const { recipient, subject, message } = await req.body;
   sendEmail(recipient, subject, message);
-  // res.json({ message: 'Email berhasil dikirim!' });
+  res.json({ message: 'Email berhasil dikirim!' });
 });
 
 app.listen(port, () => {
